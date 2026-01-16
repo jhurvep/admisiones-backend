@@ -46,9 +46,7 @@ app.post("/admisiones", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log("Servidor de admisiones activo en puerto", PORT);
+app.listen(3000, () => {
+  console.log("Servidor de admisiones activo en puerto 3000");
 });
 
