@@ -27,7 +27,7 @@ app.post("/admisiones", async (req, res) => {
 
     await transporter.sendMail({
       from: `"Admisiones Web" <${process.env.GMAIL_USER}>`,
-      to: "ceceoblatasaldivinoamor@gmail.com",
+      to: "ceceoblatasaldivinoamor88095@gmail.com",
       subject: "Nueva solicitud de admisión",
       html: `
         <h2>Nueva solicitud de admisión</h2>
@@ -46,7 +46,9 @@ app.post("/admisiones", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Servidor de admisiones activo en puerto 3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("Servidor de admisiones activo en puerto", PORT);
 });
 
